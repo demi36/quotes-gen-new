@@ -2,6 +2,7 @@ const fs = require("fs/promises");
 const express = require('express');
 const cors = require('cors');
 const  _ = require('lodash');
+const PORT = process.env.PORT||8080
 // const quotes = require('./quotes.json');
 
 const app = express();
@@ -6661,4 +6662,4 @@ app.get("/quotes",(req, res)=>{
      })
 })
 
-app.listen(8080 ,() =>  console.log("server on"));
+app.listen(PORT ,() =>  console.log(`your are listning to port ${PORT}`));
